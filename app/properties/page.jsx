@@ -1,7 +1,24 @@
 import React from "react";
+// import properties from "@/properties.json";
+import { fetchProperties } from "@/utils/requests";
+import PropertySearchForm from "@/components/PropertySearchForm";
+import Properties from "@/components/Properties";
 
-const Properties = () => {
-  return <div>Properties Page</div>;
+const PropertiesPage = async () => {
+  // const properties = await fetchProperties();
+  // // Sort properties by date
+  // properties.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+  return (
+    <>
+      <section className="bg-blue-700 py-4">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col items-start sm:px-6 lg:px-8">
+          <PropertySearchForm />
+        </div>
+      </section>
+      <Properties />
+    </>
+  );
 };
 
-export default Properties;
+export default PropertiesPage;

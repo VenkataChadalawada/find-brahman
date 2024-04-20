@@ -1,11 +1,20 @@
 import React from "react";
 import Link from "next/link";
+import Hero from "@/components/Hero";
+import InfoBoxes from "@/components/InfoBoxes";
+import HomeProperties from "@/components/HomeProperties";
+import connectDB from "@/config/database";
+import FeaturedProperties from "@/components/FeaturedProperties";
 
-const HomePage = () => {
+const HomePage = async () => {
+  console.log(process.env.MONGODB_URI);
+  await connectDB();
   return (
     <div>
-      <h1 className="text-3xl">Welcome</h1>
-      <Link href="/properties">Show Properties</Link>
+      <Hero />
+      <InfoBoxes />
+      <FeaturedProperties />
+      <HomeProperties />
     </div>
   );
 };
