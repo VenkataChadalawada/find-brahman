@@ -61,16 +61,7 @@ export const POST = async (request) => {
         { status: 400 }
       );
     }
-    console.log(
-      "------vals --",
-      user.id,
-      recipient,
-      property,
-      name,
-      email,
-      phone,
-      message
-    );
+
     const newMessage = new Message({
       sender: user.id,
       recipient,

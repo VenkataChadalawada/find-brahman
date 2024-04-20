@@ -7,7 +7,7 @@ const Message = ({ message }) => {
   const [isRead, setIsRead] = useState(message.read);
   const [isDeleted, setIsDeleted] = useState(false);
   const { setUnreadCount } = useGlobalContext();
-  console.log("message--", message);
+
   const handleReadClick = async () => {
     try {
       const res = await fetch(`/api/messages/${message._id}`, {

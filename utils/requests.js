@@ -33,7 +33,6 @@ async function fetchProperty(id) {
       throw new Error("Failed to fetch data");
     }
     const resp = res.json();
-    console.log("--resp--", resp);
     return resp;
   } catch (error) {
     console.log("-------", error);

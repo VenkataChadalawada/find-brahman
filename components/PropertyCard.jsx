@@ -21,7 +21,7 @@ const PropertyCard = ({ property }) => {
     }
   };
   // src={`/images/properties/${property.images[0]}`}
-  console.log("img", property.images[0]);
+
   return (
     <div className="bg-white rounded-xl shadow-md relative">
       <Image

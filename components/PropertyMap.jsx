@@ -28,7 +28,6 @@ const PropertyMap = ({ property }) => {
   useEffect(() => {
     const fetchCoords = async () => {
       try {
-        console.log("fetch coords");
         const res = await fromAddress(
           `${property.location.street} ${property.location.city} ${property.location.state} ${property.location.zipcode}`
         );
@@ -39,7 +38,6 @@ const PropertyMap = ({ property }) => {
           return;
         }
         const { lat, lng } = res.results[0].geometry.location;
-        console.log("lat long", lat, lng, res.results[0].geometry.location);
         setLat(lat);
         setLng(lng);
         setViewport({

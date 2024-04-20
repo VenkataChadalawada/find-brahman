@@ -14,7 +14,6 @@ const SavedPropertiesPage = () => {
           const data = await res.json();
           setProperties(data);
         } else {
-          console.log(res.statusText);
           toast.error("Failed to fetch saved properties");
         }
       } catch (err) {
@@ -26,7 +25,6 @@ const SavedPropertiesPage = () => {
     };
     fetchSavedProperties();
   }, []);
-  console.log(properties);
   return loading ? (
     <Spinner loading={loading} />
   ) : (

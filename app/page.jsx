@@ -7,7 +7,6 @@ import connectDB from "@/config/database";
 import FeaturedProperties from "@/components/FeaturedProperties";
 
 const HomePage = async () => {
-  console.log(process.env.MONGODB_URI);
   await connectDB();
   return (
     <div>

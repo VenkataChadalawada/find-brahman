@@ -15,17 +15,17 @@ const SearchResultsPage = () => {
   const location = searchParams.get("location");
   const propertyType = searchParams.get("propertyType");
 
-  console.log(searchParams.get("location"), searchParams.get("propertyType"));
+  // console.log(searchParams.get("location"), searchParams.get("propertyType"));
 
   useEffect(() => {
     const fetchSearchResults = async () => {
       const url = `/api/properties/search?location=${location}&propertyType=${propertyType}`;
-      console.log(url);
+
       try {
         const res = await fetch(url);
         if (res.status === 200) {
           const data = await res.json();
-          console.log("--data----", data);
+
           setProperties(data?.properties);
         } else {
           setProperties([]);

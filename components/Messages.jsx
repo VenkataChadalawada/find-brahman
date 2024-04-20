@@ -14,7 +14,6 @@ const Messages = () => {
         if (res.status === 200) {
           const data = await res.json();
           setMessages(data);
-          console.log("--data--", data, data.length);
         }
       } catch (error) {
         console.log("Error fetching messages", error);
@@ -37,7 +36,6 @@ const Messages = () => {
               <p>You have no messages</p>
             ) : (
               messages.map((message, i) => {
-                console.log("---i----", i, message._id);
                 return <Message key={message._id} message={message} />;
               })
             )}
