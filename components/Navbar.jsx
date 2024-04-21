@@ -6,6 +6,8 @@ import Link from "next/link";
 import logo from "@/assets/images/logo-white.png";
 import profileDefault from "@/assets/images/profile.png";
 import { FaGoogle } from "react-icons/fa";
+import { GiRomanToga } from "react-icons/gi";
+
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 import UnreadMessageCount from "./UnreadMessageCount";
 const Navbar = () => {
@@ -25,7 +27,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-blue-700 border-b border-blue-500">
+    <nav className="bg-orange-400 border-b border-white-500">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-20 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
@@ -60,10 +62,10 @@ const Navbar = () => {
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
             {/* <!-- Logo --> */}
             <Link className="flex flex-shrink-0 items-center" href="/">
-              <Image className="h-10 w-auto" src={logo} alt="PropertyPulse" />
-
+              {/* <Image className="h-10 w-auto" src={logo} alt="PropertyPulse" /> */}
+              <GiRomanToga className="h-10 w-10 text-white" />
               <span className="hidden md:block text-white text-2xl font-bold ml-2">
-                PriestPulse
+                FindBrahman
               </span>
             </Link>
             {/* <!-- Desktop Menu Hidden below md screens --> */}
@@ -72,7 +74,7 @@ const Navbar = () => {
                 <Link
                   href="/"
                   className={`${
-                    pathname === "/" ? "bg-black" : ""
+                    pathname === "/" ? "bg-orange-700" : ""
                   } text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2`}
                 >
                   Home
@@ -80,19 +82,19 @@ const Navbar = () => {
                 <Link
                   href="/properties"
                   className={`${
-                    pathname === "/properties" ? "bg-black" : ""
+                    pathname === "/properties" ? "bg-orange-500" : ""
                   } text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2`}
                 >
-                  Priests
+                  Pandits
                 </Link>
                 {session && (
                   <Link
                     href="/properties/add"
                     className={`${
-                      pathname === "/properties/add" ? "bg-black" : ""
+                      pathname === "/properties/add" ? "bg-orange-500" : ""
                     } text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2`}
                   >
-                    Add Priest
+                     Pandit Signup
                   </Link>
                 )}
               </div>
@@ -230,7 +232,7 @@ const Navbar = () => {
             <Link
               href="/"
               className={`${
-                pathname === "/" ? "bg-black" : ""
+                pathname === "/" ? "bg-orange-700" : ""
               } text-white block rounded-md px-3 py-2 text-base font-medium`}
             >
               Home
@@ -238,19 +240,19 @@ const Navbar = () => {
             <Link
               href="/properties"
               className={`${
-                pathname === "/properties" ? "bg-black" : ""
+                pathname === "/properties" ? "bg-orange-700" : ""
               } text-white block rounded-md px-3 py-2 text-base font-medium`}
             >
-              Properties
+              Pandits
             </Link>
             {session && (
               <Link
                 href="/properties/add"
                 className={`${
-                  pathname === "/properties/add" ? "bg-black" : ""
+                  pathname === "/properties/add" ? "bg-orange-700" : ""
                 } text-white block rounded-md px-3 py-2 text-base font-medium`}
               >
-                Add Property
+                Pandit Signup
               </Link>
             )}
 

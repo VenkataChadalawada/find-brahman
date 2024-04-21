@@ -56,7 +56,7 @@ const Message = ({ message }) => {
         </div>
       )}
       <h2 className="text-xl mb-4">
-        <span className="font-bold">Property Inquiry:</span>{" "}
+        <span className="font-bold">Pandit Inquiry:</span>{" "}
         {message.property.name}
       </h2>
       <p className="text-gray-700">{message.body}</p>
@@ -68,13 +68,13 @@ const Message = ({ message }) => {
 
         <li>
           <strong>Reply Email:</strong>{" "}
-          <a href={`mailto:${message.email}`} className="text-blue-500">
+          <a href={`mailto:${message.email}`} className="text-orange-700">
             {message.email}
           </a>
         </li>
         <li>
           <strong>Reply Phone:</strong>{" "}
-          <a href={`tel:${message.phone}`} className="text-blue-500">
+          <a href={`tel:${message.phone}`} className="text-orange-700">
             {message.phone}
           </a>
         </li>
@@ -86,7 +86,7 @@ const Message = ({ message }) => {
       <button
         onClick={handleReadClick}
         className={`mt-4 mr-3 ${
-          isRead ? "bg-gray-300" : "bg-blue-500 text-white"
+          isRead ? "bg-gray-300" : "bg-orange-500 text-white"
         } text-white py-1 px-3 rounded-md`}
       >
         {isRead ? "Mark As New" : "Mark As Read"}

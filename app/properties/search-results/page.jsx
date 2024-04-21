@@ -43,7 +43,7 @@ const SearchResultsPage = () => {
 
   return (
     <>
-      <section className="bg-blue-700 py-4">
+      <section className="bg-orange-700 py-4">
         <div className="max-w-7xl mx-auto px-4 flex flex-col items-start sm:px-6 lg:px-8">
           <PropertySearchForm />
         </div>
@@ -55,10 +55,10 @@ const SearchResultsPage = () => {
           <div className="container-xl lg:container m-auto">
             <Link
               href="/properties"
-              className="flex items-center text-blue-500 hover:underline mb-3"
+              className="flex items-center text-orange-500 hover:underline mb-3"
             >
               <FaArrowCircleLeft className="mr-2 mb-1" />
-              Back to Properties
+              Back to Pandits
             </Link>
             <h1 className="text-2xl mb-4">Search results</h1>
             {properties.length === 0 ? (

@@ -52,13 +52,13 @@ const PropertyPage = () => {
             <div className="container m-auto py-6 px-6">
               <Link
                 href="/properties"
-                className="text-blue-500 hover:text-blue-600 flex items-center"
+                className="text-orange-500 hover:text-orange-600 flex items-center"
               >
-                <FaArrowLeft className="mr-2" /> Back to Properties
+                <FaArrowLeft className="mr-2" /> Back to Pandits
               </Link>
             </div>
           </section>
-          <section className="bg-blue-50">
+          <section className="bg-orange-50">
             <div className="container m-auto py-24 max-w-6xl">
               <div className="grid grid-cols-1 md:grid-cols-[70%_30%] w-full gap-6">
                 <PropertyDetails property={property} />
@@ -101,7 +101,7 @@ export default PropertyPage;
 //   return (
 //     <div>
 //       ID Prop
-//       <button onClick={() => router.push("/")} className="bg-blue-500 p-2">
+//       <button onClick={() => router.push("/")} className="bg-orange-500 p-2">
 //         Go Home {id} {name} {pathName}
 //       </button>
 //     </div>
