@@ -9,9 +9,9 @@ import "react-toastify/dist/ReactToastify.css";
 import "photoswipe/dist/photoswipe.css";
 
 export const metadata = {
-  title: "PropertyPulse | Find the Perfect Rental",
-  description: "Find your dream rental property",
-  keywords: "rental, find rentals, find properties",
+  title: "FindBrahman | Find the Perfect Pandit",
+  description: "Find your perfect pandit",
+  keywords: "Pandit online, find Priest hindu, find pandit",
 };
 const layout = ({ children }) => {
   return (
