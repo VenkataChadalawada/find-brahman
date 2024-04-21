@@ -115,7 +115,7 @@ const PropertyAddForm = () => {
           encType="multipart/form-data"
         >
           <h2 className="text-3xl text-center font-semibold mb-6">
-            Add Property
+            Add Pandit Form
           </h2>
 
           <div className="mb-4">
@@ -123,7 +123,7 @@ const PropertyAddForm = () => {
               htmlFor="type"
               className="block text-gray-700 font-bold mb-2"
             >
-              Property Type
+              Pandit Language
             </label>
             <select
               id="type"
@@ -133,12 +133,15 @@ const PropertyAddForm = () => {
               value={fields.type}
               onChange={handleChange}
             >
-              <option value="Apartment">Apartment</option>
-              <option value="Condo">Condo</option>
-              <option value="House">House</option>
-              <option value="Cabin Or Cottage">Cabin or Cottage</option>
-              <option value="Room">Room</option>
-              <option value="Studio">Studio</option>
+              <option value="All">All</option>
+              <option value="Telugu">Telugu</option>
+              <option value="Tamil">Tamil</option>
+              <option value="Malayalam">Malayalam</option>
+              <option value="Hindi">Hindi</option>
+              <option value="Marathi">Marathi</option>
+              <option value="Kannada">Kannada</option>
+              <option value="Odiya">Odiya</option>
+              <option value="Gujarathi">Gujarathi</option>
               <option value="Other">Other</option>
             </select>
           </div>
@@ -225,7 +228,7 @@ const PropertyAddForm = () => {
                 htmlFor="beds"
                 className="block text-gray-700 font-bold mb-2"
               >
-                Beds
+                Poojas
               </label>
               <input
                 type="number"
@@ -242,7 +245,7 @@ const PropertyAddForm = () => {
                 htmlFor="baths"
                 className="block text-gray-700 font-bold mb-2"
               >
-                Baths
+                homas
               </label>
               <input
                 type="number"
@@ -259,7 +262,7 @@ const PropertyAddForm = () => {
                 htmlFor="square_feet"
                 className="block text-gray-700 font-bold mb-2"
               >
-                Square Feet
+                Japams
               </label>
               <input
                 type="number"
@@ -275,194 +278,338 @@ const PropertyAddForm = () => {
 
           <div className="mb-4">
             <label className="block text-gray-700 font-bold mb-2">
-              Amenities
+              Talents
             </label>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_wifi"
+                  id="amenity_Aksharabhyasam"
                   name="amenities"
-                  value="Wifi"
+                  value="Aksharabhyasam"
                   className="mr-2"
-                  checked={fields.amenities.includes("Wifi")}
+                  checked={fields.amenities.includes("Aksharabhyasam")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_wifi">Wifi</label>
+                <label htmlFor="amenity_Aksharabhyasam">Aksharabhyasam</label>
               </div>
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_kitchen"
+                  id="amenity_Annaprasana"
                   name="amenities"
-                  value="Full Kitchen"
+                  value="Annaprasana"
                   className="mr-2"
-                  checked={fields.amenities.includes("Full Kitchen")}
+                  checked={fields.amenities.includes("Annaprasana")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_kitchen">Full kitchen</label>
+                <label htmlFor="amenity_Annaprasana">Annaprasana</label>
               </div>
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_washer_dryer"
+                  id="amenity_Barasala"
                   name="amenities"
-                  value="Washer & Dryer"
+                  value="Barasala"
                   className="mr-2"
-                  checked={fields.amenities.includes("Washer & Dryer")}
+                  checked={fields.amenities.includes("Barasala")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_washer_dryer">Washer & Dryer</label>
+                <label htmlFor="amenity_Barasala">Barasala</label>
               </div>
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_free_parking"
+                  id="amenity_bhima_santhi"
                   name="amenities"
-                  value="Free Parking"
+                  value="Bhima rather sandhi"
                   className="mr-2"
-                  checked={fields.amenities.includes("Free Parking")}
+                  checked={fields.amenities.includes("Bhima rather sandhi")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_free_parking">Free Parking</label>
+                <label htmlFor="amenity_bhima_santhi">Bhima rather sandhi</label>
               </div>
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_pool"
+                  id="amenity_kalyanam"
                   name="amenities"
-                  value="Swimming Pool"
+                  value="Bhagavad Kalyanam"
                   className="mr-2"
-                  checked={fields.amenities.includes("Swimming Pool")}
+                  checked={fields.amenities.includes("Bhagavad Kalyanam")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_pool">Swimming Pool</label>
+                <label htmlFor="amenity_kalyanam">Bhagavad Kalyanam</label>
               </div>
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_hot_tub"
+                  id="amenity_muhurtham"
                   name="amenities"
-                  value="Hot Tub"
+                  value="Muhurtham fixing"
                   className="mr-2"
-                  checked={fields.amenities.includes("Hot Tub")}
+                  checked={fields.amenities.includes("Muhurtham fixing")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_hot_tub">Hot Tub</label>
+                <label htmlFor="amenity_muhurtham">Muhurtham fixing</label>
               </div>
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_24_7_security"
+                  id="amenity_house_warm"
                   name="amenities"
-                  value="24/7 Security"
+                  value="House warming"
                   className="mr-2"
-                  checked={fields.amenities.includes("24/7 Security")}
+                  checked={fields.amenities.includes("House warming")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_24_7_security">24/7 Security</label>
+                <label htmlFor="amenity_house_warm">House warming</label>
               </div>
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_wheelchair_accessible"
+                  id="amenity_marriage"
                   name="amenities"
-                  value="Wheelchair Accessible"
+                  value="Marriage"
                   className="mr-2"
-                  checked={fields.amenities.includes("Wheelchair Accessible")}
+                  checked={fields.amenities.includes("Marriage")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_wheelchair_accessible">
-                  Wheelchair Accessible
+                <label htmlFor="amenity_marriage">
+                  Marriage
                 </label>
               </div>
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_elevator_access"
+                  id="amenity_Nischitartham"
                   name="amenities"
-                  value="Elevator Access"
+                  value="Nischitartham"
                   className="mr-2"
-                  checked={fields.amenities.includes("Elevator Access")}
+                  checked={fields.amenities.includes("Nischitartham")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_elevator_access">Elevator Access</label>
+                <label htmlFor="amenity_Nischitartham">Nischitartham</label>
               </div>
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_dishwasher"
+                  id="amenity_Shashtipoorthi"
                   name="amenities"
-                  value="Dishwasher"
+                  value="Shashtipoorthi"
                   className="mr-2"
-                  checked={fields.amenities.includes("Dishwasher")}
+                  checked={fields.amenities.includes("Shashtipoorthi")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_dishwasher">Dishwasher</label>
+                <label htmlFor="amenity_Shashtipoorthi">Shashtipoorthi</label>
               </div>
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_gym_fitness_center"
+                  id="amenity_gym_Upanayanam"
                   name="amenities"
-                  value="Gym/Fitness Center"
+                  value="Upanayanam"
                   className="mr-2"
-                  checked={fields.amenities.includes("Gym/Fitness Center")}
+                  checked={fields.amenities.includes("Upanayanam")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_gym_fitness_center">
-                  Gym/Fitness Center
+                <label htmlFor="amenity_gym_Upanayanam">
+                  Upanayanam
                 </label>
               </div>
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_air_conditioning"
+                  id="amenity_satya_vratam"
                   name="amenities"
-                  value="Air Conditioning"
+                  value="Satya Narayana vartam"
                   className="mr-2"
-                  checked={fields.amenities.includes("Air Conditioning")}
+                  checked={fields.amenities.includes("Satya Narayana vartam")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_air_conditioning">
-                  Air Conditioning
+                <label htmlFor="amenity_satya_vratam">
+                  Satya Narayana vartam
                 </label>
               </div>
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_balcony_patio"
+                  id="amenity_homam"
                   name="amenities"
-                  value="Balcony/Patio"
+                  value="Homams"
                   className="mr-2"
-                  checked={fields.amenities.includes("Balcony/Patio")}
+                  checked={fields.amenities.includes("Homams")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_balcony_patio">Balcony/Patio</label>
+                <label htmlFor="amenity_homam">Homams</label>
               </div>
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_smart_tv"
+                  id="amenity_pariharam"
                   name="amenities"
-                  value="Smart TV"
+                  value="Pariharams"
                   className="mr-2"
-                  checked={fields.amenities.includes("Smart TV")}
+                  checked={fields.amenities.includes("Pariharams")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_smart_tv">Smart TV</label>
+                <label htmlFor="amenity_pariharam">Pariharams</label>
               </div>
               <div>
                 <input
                   type="checkbox"
-                  id="amenity_coffee_maker"
+                  id="amenity_japam"
                   name="amenities"
-                  value="Coffee Maker"
+                  value="Japam"
                   className="mr-2"
-                  checked={fields.amenities.includes("Coffee Maker")}
+                  checked={fields.amenities.includes("Japam")}
                   onChange={handleAmenitiesChange}
                 />
-                <label htmlFor="amenity_coffee_maker">Coffee Maker</label>
+                <label htmlFor="amenity_japam">Japam</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="amenity_Punyavachanam"
+                  name="amenities"
+                  value="Punyavachanam"
+                  className="mr-2"
+                  checked={fields.amenities.includes("Punyavachanam")}
+                  onChange={handleAmenitiesChange}
+                />
+                <label htmlFor="amenity_Punyavachanam">Punyavachanam</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="amenity_vehicle_pooja"
+                  name="amenities"
+                  value="New vehicle pooja"
+                  className="mr-2"
+                  checked={fields.amenities.includes("New vehicle pooja")}
+                  onChange={handleAmenitiesChange}
+                />
+                <label htmlFor="amenity_vehicle_pooja">New vehicle pooja</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="amenity_Bhoomi_pooja"
+                  name="amenities"
+                  value="Bhoomi pooja"
+                  className="mr-2"
+                  checked={fields.amenities.includes("Bhoomi pooja")}
+                  onChange={handleAmenitiesChange}
+                />
+                <label htmlFor="amenity_Bhoomi_pooja">Bhoomi pooja</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="amenity_lalitha"
+                  name="amenities"
+                  value="Lalitha saahasranama pooja"
+                  className="mr-2"
+                  checked={fields.amenities.includes("Lalitha saahasranama pooja")}
+                  onChange={handleAmenitiesChange}
+                />
+                <label htmlFor="amenity_lalitha">Lalitha saahasranama pooja</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="amenity_rudra"
+                  name="amenities"
+                  value="Rudrabhishekam"
+                  className="mr-2"
+                  checked={fields.amenities.includes("Rudrabhishekam")}
+                  onChange={handleAmenitiesChange}
+                />
+                <label htmlFor="amenity_rudra">Rudrabhishekam</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="amenity_vara_laxmi_pooja"
+                  name="amenities"
+                  value="Vara Lakshmi pooja"
+                  className="mr-2"
+                  checked={fields.amenities.includes("Vara Lakshmi pooja")}
+                  onChange={handleAmenitiesChange}
+                />
+                <label htmlFor="amenity_vara_laxmi_pooja">Vara Lakshmi pooja</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="amenity_veda_parayana"
+                  name="amenities"
+                  value="Veda parayanam"
+                  className="mr-2"
+                  checked={fields.amenities.includes("Veda parayanam")}
+                  onChange={handleAmenitiesChange}
+                />
+                <label htmlFor="amenity_veda_parayana">Veda parayanam</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="amenity_annadanam"
+                  name="amenities"
+                  value="Annadanam"
+                  className="mr-2"
+                  checked={fields.amenities.includes("Annadanam")}
+                  onChange={handleAmenitiesChange}
+                />
+                <label htmlFor="amenity_annadanam">Annadanam</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="amenity_karma"
+                  name="amenities"
+                  value="Karma karyam"
+                  className="mr-2"
+                  checked={fields.amenities.includes("Karma karyam")}
+                  onChange={handleAmenitiesChange}
+                />
+                <label htmlFor="amenity_karma">Karma karyam</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="amenity_Srardham"
+                  name="amenities"
+                  value="Srardham"
+                  className="mr-2"
+                  checked={fields.amenities.includes("Srardham")}
+                  onChange={handleAmenitiesChange}
+                />
+                <label htmlFor="amenity_Srardham">Srardham</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="amenity_danam"
+                  name="amenities"
+                  value="Danam"
+                  className="mr-2"
+                  checked={fields.amenities.includes("Danam")}
+                  onChange={handleAmenitiesChange}
+                />
+                <label htmlFor="amenity_danam">Danam</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="amenity_santhi"
+                  name="amenities"
+                  value="Shanthi pooja"
+                  className="mr-2"
+                  checked={fields.amenities.includes("Shanthi pooja")}
+                  onChange={handleAmenitiesChange}
+                />
+                <label htmlFor="amenity_santhi">Shanthi pooja</label>
               </div>
             </div>
           </div>
@@ -519,7 +666,7 @@ const PropertyAddForm = () => {
               htmlFor="seller_name"
               className="block text-gray-700 font-bold mb-2"
             >
-              Seller Name
+              Pandit Name
             </label>
             <input
               type="text"
@@ -536,7 +683,7 @@ const PropertyAddForm = () => {
               htmlFor="seller_email"
               className="block text-gray-700 font-bold mb-2"
             >
-              Seller Email
+              Pandit Email
             </label>
             <input
               type="email"
@@ -554,7 +701,7 @@ const PropertyAddForm = () => {
               htmlFor="seller_phone"
               className="block text-gray-700 font-bold mb-2"
             >
-              Seller Phone
+              Pandit Phone
             </label>
             <input
               type="tel"
@@ -588,11 +735,11 @@ const PropertyAddForm = () => {
 
           <div>
             <button
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
+              className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
               type="submit"
               disabled={isLoading}
             >
-              Add Property
+              Add Pandit
             </button>
           </div>
         </form>

@@ -8,16 +8,17 @@ import {
   FaMoneyBill,
   FaMapMarker,
 } from "react-icons/fa";
+import {GiFlowers, GiFireBowl, GiMeditation} from 'react-icons/gi';
 
 const FeaturedPropertyCard = ({ property }) => {
   const { rates } = property;
   const getRateDisplay = () => {
     if (rates.monthly) {
-      return `${rates.monthly.toLocaleString()}/mo`;
+      return `${rates.monthly.toLocaleString()}/hr`;
     } else if (rates.weekly) {
-      return `${rates.weekly.toLocaleString()}/wk`;
+      return `${rates.weekly.toLocaleString()}/day`;
     } else if (rates.nightly) {
-      return `${rates.nightly.toLocaleString()}/night`;
+      return `${rates.nightly.toLocaleString()}/event`;
     }
   };
   return (
@@ -34,20 +35,20 @@ const FeaturedPropertyCard = ({ property }) => {
         <div className="p-6">
           <h3 className="text-xl font-bold">{property.name}</h3>
           <div className="text-gray-600 mb-4">{property.type}</div>
-          <h3 className="absolute top-[10px] left-[10px] bg-white px-4 py-2 rounded-lg text-blue-500 font-bold text-right md:text-center lg:text-right">
+          <h3 className="absolute top-[10px] left-[10px] bg-white px-4 py-2 rounded-lg text-orange-500 font-bold text-right md:text-center lg:text-right">
             {getRateDisplay() ? `$${getRateDisplay()}` : "message for price"}
           </h3>
           <div className="flex justify-center gap-4 text-gray-500 mb-4">
             <p>
-              <FaBed className="inline-block mr-2" /> {property.beds}{" "}
+              <GiFlowers className="inline-block mr-2" /> {property.beds}{" "}
               <span className="md:hidden lg:inline">Beds</span>
             </p>
             <p>
-              <FaBath className="inline-block mr-2" /> {property.baths}{" "}
+              <GiFireBowl className="inline-block mr-2" /> {property.baths}{" "}
               <span className="md:hidden lg:inline">Baths</span>
             </p>
             <p>
-              <FaRulerCombined className="inline-block mr-2" />
+              <GiMeditation className="inline-block mr-2" />
               {property.square_feet}{" "}
               <span className="md:hidden lg:inline">sqft</span>
             </p>
@@ -56,17 +57,17 @@ const FeaturedPropertyCard = ({ property }) => {
           <div className="flex justify-center gap-4 text-green-900 text-sm mb-4">
             {rates.nightly && (
               <p>
-                <FaMoneyBill className="inline mr-2" /> Nightly
+                <FaMoneyBill className="inline mr-2" /> hour
               </p>
             )}
             {rates.weekly && (
               <p>
-                <FaMoneyBill className="inline mr-2" /> Weekly
+                <FaMoneyBill className="inline mr-2" /> day
               </p>
             )}
             {rates.monthly && (
               <p>
-                <FaMoneyBill className="inline mr-2" /> Monthly
+                <FaMoneyBill className="inline mr-2" /> event
               </p>
             )}
           </div>
@@ -83,7 +84,7 @@ const FeaturedPropertyCard = ({ property }) => {
             </div>
             <Link
               href={`/properties/${property._id}`}
-              className="h-[36px] ml-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-center text-sm"
+              className="h-[36px] ml-2 bg-orange-700 hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-center text-sm"
             >
               Details
             </Link>

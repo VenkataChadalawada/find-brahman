@@ -7,6 +7,7 @@ import {
   FaCheck,
   FaMapMarker,
 } from "react-icons/fa";
+import {GiFlowers, GiFireBowl, GiMeditation} from 'react-icons/gi';
 import PropertyMap from "@/components/PropertyMap";
 
 const PropertyDetails = ({ property }) => {
@@ -28,8 +29,8 @@ const PropertyDetails = ({ property }) => {
         </h3>
         <div className="flex flex-col md:flex-row justify-around">
           <div className="flex items-center justify-center mb-4 border-b border-gray-200 md:border-b-0 pb-4 md:pb-0">
-            <div className="text-gray-500 mr-2 font-bold">Nightly</div>
-            <div className="text-2xl font-bold text-blue-500">
+            <div className="text-gray-500 mr-2 font-bold">Per Hour</div>
+            <div className="text-2xl font-bold text-orange-500">
               {property.rates.nightly ? (
                 `$${property.rates.nightly.toLocaleString()}`
               ) : (
@@ -38,8 +39,8 @@ const PropertyDetails = ({ property }) => {
             </div>
           </div>
           <div className="flex items-center justify-center mb-4 border-b border-gray-200 md:border-b-0 pb-4 md:pb-0">
-            <div className="text-gray-500 mr-2 font-bold">Weekly</div>
-            <div className="text-2xl font-bold text-blue-500">
+            <div className="text-gray-500 mr-2 font-bold">Per Day</div>
+            <div className="text-2xl font-bold text-orange-500">
               {property.rates.weekly ? (
                 `$${property.rates.weekly.toLocaleString()}`
               ) : (
@@ -48,8 +49,8 @@ const PropertyDetails = ({ property }) => {
             </div>
           </div>
           <div className="flex items-center justify-center mb-4 pb-4 md:pb-0">
-            <div className="text-gray-500 mr-2 font-bold">Monthly</div>
-            <div className="text-2xl font-bold text-blue-500">
+            <div className="text-gray-500 mr-2 font-bold">Per Event</div>
+            <div className="text-2xl font-bold text-orange-500">
               {property.rates.monthly ? (
                 `$${property.rates.monthly.toLocaleString()}`
               ) : (
@@ -61,17 +62,17 @@ const PropertyDetails = ({ property }) => {
       </div>
       <div className="bg-white p-6 rounded-lg shadow-md mt-6">
         <h3 className="text-lg font-bold mb-6">Description & Details</h3>
-        <div className="flex justify-center gap-4 text-blue-500 mb-4 text-xl space-x-9">
+        <div className="flex justify-center gap-4 text-orange-500 mb-4 text-xl space-x-9">
           <p>
-            <FaBed className="inline-block mr-2" /> {property.beds}{" "}
+            <GiFlowers className="inline-block mr-2" /> {property.beds}{" "}
             <span className="hidden sm:inline">Beds</span>
           </p>
           <p>
-            <FaBath className="inline-block mr-2" /> {property.baths}{" "}
+            <GiFireBowl className="inline-block mr-2" /> {property.baths}{" "}
             <span className="hidden sm:inline">Baths</span>
           </p>
           <p>
-            <FaRulerCombined className="inline-block mr-2" />
+            <GiMeditation className="inline-block mr-2" />
             {property.square_feet}{" "}
             <span className="hidden sm:inline">sqft</span>
           </p>
@@ -79,7 +80,7 @@ const PropertyDetails = ({ property }) => {
         <p className="text-gray-500 mb-4 text-center">{property.description}</p>
       </div>
       <div className="bg-white p-6 rounded-lg shadow-md mt-6">
-        <h3 className="text-lg font-bold mb-6">Amenities</h3>
+        <h3 className="text-lg font-bold mb-6">Talents</h3>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 list-none">
           {property?.amenities.map((amenity, index) => (
             <li key={index}>
