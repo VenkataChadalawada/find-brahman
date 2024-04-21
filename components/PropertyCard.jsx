@@ -45,16 +45,16 @@ const PropertyCard = ({ property }) => {
         <div className="flex justify-center gap-4 text-gray-500 mb-4">
           <p>
             <GiFlowers className="inline mr-2" /> {property.beds}
-            <span className="md:hidden lg:inline">3</span>
+            <span className="md:hidden lg:inline">Poojas</span>
           </p>
           <p>
             <GiFireBowl className="inline mr-2" /> {property.baths}
-            <span className="md:hidden lg:inline">bath</span>
+            <span className="md:hidden lg:inline">Homams</span>
           </p>
           <p>
             <GiMeditation className="inline mr-2" />
             {property.square_feet}{" "}
-            <span className="md:hidden lg:inline">sqft</span>
+            <span className="md:hidden lg:inline">Japams</span>
           </p>
         </div>
 

@@ -65,16 +65,16 @@ const PropertyDetails = ({ property }) => {
         <div className="flex justify-center gap-4 text-orange-500 mb-4 text-xl space-x-9">
           <p>
             <GiFlowers className="inline-block mr-2" /> {property.beds}{" "}
-            <span className="hidden sm:inline">Beds</span>
+            <span className="hidden sm:inline">Poojas</span>
           </p>
           <p>
             <GiFireBowl className="inline-block mr-2" /> {property.baths}{" "}
-            <span className="hidden sm:inline">Baths</span>
+            <span className="hidden sm:inline">Homams</span>
           </p>
           <p>
             <GiMeditation className="inline-block mr-2" />
             {property.square_feet}{" "}
-            <span className="hidden sm:inline">sqft</span>
+            <span className="hidden sm:inline">Japams</span>
           </p>
         </div>
         <p className="text-gray-500 mb-4 text-center">{property.description}</p>
