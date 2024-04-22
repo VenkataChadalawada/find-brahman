@@ -76,6 +76,7 @@ const PropertyAddForm = () => {
   };
   const handleImageChange = (e) => {
     const { files } = e.target;
+    console.log('--------', files);
     // clone images array
     const updatedImages = [...fields.images];
     // add new files to the array
@@ -89,23 +90,7 @@ const PropertyAddForm = () => {
     }));
   };
 
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   if (isLoading) {
-  //     return;
-  //   }
-  //   setIsLoading(true);
-  //   try {
-  //     const response = await axios.post('/api/properties', formData);
-  //     // Handle successful response
-  //     console.log(response.data);
-  //   } catch (error) {
-  //     // Handle error
-  //     console.error('Error submitting form:', error);
-  //   } finally {
-  //     setIsLoading(false);
-  //   }
-  // };
+
   return (
     mounted && (
       <div>
@@ -178,7 +163,7 @@ const PropertyAddForm = () => {
             ></textarea>
           </div>
 
-          <div className="mb-4 bg-blue-50 p-4">
+          <div className="mb-4 bg-orange-50 p-4">
             <label className="block text-gray-700 font-bold mb-2">
               Location
             </label>
@@ -614,14 +599,14 @@ const PropertyAddForm = () => {
             </div>
           </div>
 
-          <div className="mb-4 bg-blue-50 p-4">
+          <div className="mb-4 bg-orange-50 p-4">
             <label className="block text-gray-700 font-bold mb-2">
               Rates (Leave blank if not applicable)
             </label>
             <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
               <div className="flex items-center">
                 <label htmlFor="weekly_rate" className="mr-2">
-                  Weekly
+                  Per Hour
                 </label>
                 <input
                   type="number"
@@ -634,7 +619,7 @@ const PropertyAddForm = () => {
               </div>
               <div className="flex items-center">
                 <label htmlFor="monthly_rate" className="mr-2">
-                  Monthly
+                  Per Day
                 </label>
                 <input
                   type="number"
@@ -647,7 +632,7 @@ const PropertyAddForm = () => {
               </div>
               <div className="flex items-center">
                 <label htmlFor="nightly_rate" className="mr-2">
-                  Nightly
+                  Per Event
                 </label>
                 <input
                   type="number"
